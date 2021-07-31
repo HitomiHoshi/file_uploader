@@ -15,7 +15,12 @@ app.post('/upload', upload.single('motivate-desktop'), function (req, res, next)
   });
 
 app.get('/', (req, res) => {
-    res.send("hello");
+    // res.send("hello");
+    const options = {
+      root: 'upload/'
+    }
+    
+    res.sendFile('85e55c3b773ff987411537e6d93f5c26', options);
   });
 
   // set port, listen for requests
